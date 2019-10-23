@@ -1,0 +1,181 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[total={6in, 8in}]{geometry}
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumitem}
+
+\title{Documento de Requisitos\\ Contabilidade AutoImports}
+\author{Pablo Cecilio, Henrique, Juninho}
+\date{Outubro 2019}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introdução}
+
+Este documento especifica os requisitos do sistema GaEl - Garçom Eletrônico, fornecendo aos desenvolvedores as informações necessárias para o projeto e implementação, assim como para a realização dos testes do sistema.
+
+\subsection{Propósito do Documento de Requisitos}
+
+O GaEl é um software para dispositivos móveis responsável por cadastrar os diferentes tipos de refeições de um restaurante e os pedidos dos clientes. Após o cliente realizar um pedido, este deve ser informado à cozinha e registrado na conta da mesa do cliente juntamente com o seu respectivo valor. O GaEl também é responsável por registrar a forma de pagamento, mas não deverá controlar o estoque.
+
+\subsection{Definições, Acrônimos e Abreviações}
+
+\begin{itemize}[leftmargin=*]
+    \item[] \textbf{GaEl:} Garçom Eletrônico
+    \item[] \textbf{Dispositivo móvel:} dispositivo portátil que possibilita acesso imediato e com o usuário em movimento,permitindo sincronização de dados com outros sistemas, conexão com redes sem fio e internet. Exemplos deste tipo de dispositivo incluem smartphones, tablets e PDAs (personal digital assistants).
+    \item[] \textbf{Multiplataforma:} diz-se multiplataforma um programa ou sistema que roda em mais de uma plataforma.
+    \item[] \textbf{Wi-Fi (Wireless Fidelity):} utilizada por produtos certificados que pertencem à classe de dispositivos de rede local sem fios (WLAN) baseados no padrão IEEE 802.11. Para se ter acesso à internet através de rede Wi-Fi deve-se estar no raio de ação ou área de abrangência de um ponto de acesso ou local público onde opere rede sem fios e usar dispositivo móvel com capacidade de comunicação sem fio.
+    \item[] \textbf{Backup(cópia de segurança):} é a cópia de dados de um dispositivo de armazenamento a outro para que possam ser restaurados em caso da perda dos dados originais, o que pode envolver apagamentos acidentais ou corrupção de dados.
+\end{itemize}
+
+\subsection{Visão Geral do Documento de Requisitos}
+
+Este documento está dividido em três seções. Na Seção 1, uma breve introdução sobre o conteúdo deste documento foi apresentada. Na Seção 2 é apresentada uma descrição geral do sistema. Na Seção 3, os requisitos específicos do GaEl são descritos.
+
+\section{Descrição Geral}
+
+\subsection{Perspectiva do Produto}
+
+O GaEl tem como objetivo principal auxiliar no atendimento ao cliente de restaurantes. Trata-se de um sistema com banco de dados que deve possuir dois terminais fixos (um no caixa e outro na cozinha) e vários dispositivos móveis que devem ser operados pelos garçons. Os pedidos registrados pelos dispositivos móveis devem ser enviados automaticamente para a cozinha através de uma rede interna. Ao final, quando o cliente solicita o fechamento da conta, o garçom deve enviar através do sistema o consumo completo do cliente e o valor para o caixa. Os usuários do sistema GaEl são principalmente os garçons de restaurantes. O sistema também deve enviar relatórios periódicos ao gerente sobre os itens do cardápio mais pedidos e percentuais de entrada, comida, bebida e sobremesa do mês. Isso o ajudará na decisão de retirar itens do cardápio.
+
+\subsection{Funções do Produto}
+
+\begin{itemize}
+\item Inclusão, alteração e exclusão de pedidos;
+\item Inclusão, alteração e exclusão de adicionais aos pedidos;
+\item Inclusão, alteração e exclusão de itens do cardápio;
+\item Inclusão, alteração e exclusão de formas de pagamento;
+\item Consulta de itens do cardápio;
+\item Consulta de pedidos;
+\item Consulta de conta do cliente;
+\item Envio da conta final ao terminal do caixa;
+\item Envio dos pedidos ao terminal da cozinha;
+\item Emissão de relatórios sobre itens do cardápio mais pedidos;
+\item Emissão de relatório ao final do mês com a porcentagem de pedidos de cada item do cardápio.
+\end{itemize}
+
+\subsection{Características do Usuário}
+
+Os usuários primários do sistema GaEl devem ser os garçons dos estabelecimentos onde este sistema será instalado. O usuário Garçom percorre toda a extensão do estabelecimento anotando os pedidos de cada mesa e de cada cliente no sistema GaEl. Cada usuário Garçom deve possuir o seu próprio dispositivo móvel no seu turno. Ele também deve possuir conhecimentos básicos sobre dispositivos móveis. O usuário Gerente deve utilizar o sistema para cadastrar as refeições do restaurante e solicitar os relatórios referentes aos pratos mais pedidos.
+
+\subsection{Restrições}
+
+O sistema GaEl deve ser multiplataforma, adaptável a dispositivos móveis.
+
+\subsection{Suposições e Dependências}
+
+A configuração mínima para a execução do sistema GaEl são dispositivos móveis com conexão Wi-fi.
+
+\section{Requisitos Específicos}
+
+\subsection{Interfaces Externas}
+
+O sistema Gael possui três interfaces externas: com o sistema do caixa, cozinha e com o usuário Garçom.
+
+\subsubsection{Interface com o Caixa}
+
+Constituída por um microcomputador interconectado com o sistema GaEl, esta interface deve conter as informações de todas as mesas e os pedidos das mesmas, fechamento de contas, opções para a forma de pagamento (dinheiro, cheque ou cartão de crédito), área destinada à emissão de relatórios que inclui pratos mais pedidos e percentuais de entrada, comida, bebida e sobremesa do mês.
+
+\subsubsection{Interface da Cozinha}
+
+Um microcomputador deve estar na cozinha interconectado com o sistema GaEl. O computador disponível na cozinha deve mostrar cada pedido com o número da mesa após o pedido ser realizado pelo garçom.
+
+\subsubsection{Interface com o Graçom}
+
+Para acesso ao sistema, cada garçom deve realizar um login em seu dispositivo móvel. O sistema deve conter menus com todas as opções de pratos cadastrados e disponíveis no estabelecimento e suas variações, além de ter informações das mesas disponíveis e ocupadas. Se a mesa estiver ocupada, o sistema deve mostrar os pedidos das mesas com suas respectivas contas incluindo opção para fechamento das mesmas. Nesta interface deve haver as opções de registro do pedido realizado pelos clientes e o envio do pedido para a cozinha.
+
+\subsection{Requisitos Funcionais}
+
+O sistema GaEl deve possuir uma interface de fácil acesso pelos usuários, onde cada um deles possui um login e uma senha para acesso ao sistema, não permitindo o acesso de pessoas não autorizadas. Os requisitos funcionais do GaEl estão organizados com base nas principais funcionalidades do sistema: Consulta e atualização de Itens do Cardápio, Pedidos, Clientes, envio de pedidos e contas, e Emissões de Relatórios.
+
+\subsubsection{Requisitos de Preparação e Manutenção}
+
+\begin{enumerate}
+    \item O sistema deve permitir que os usuários façam login, por meio de um nome de usuário que deve ser validado por uma senha.
+    \item O sistema deve permitir que apenas o usuário Gerente faça a inclusão, alteração e remoção dos itens do cardápio e respectivos preços.
+    \item O sistema deve permitir que apenas o usuário Gerente marque um item do cardápio como indisponível (ou retorne para disponível posteriormente).
+    \item Um item do cardápio deve ser categorizado como: entrada, prato principal, guarnição, sobremesa ou bebida.
+    \item O sistema deve permitir que apenas o usuário Gerente faça a inclusão, alteração e remoção de funcionário sem sua base de dados com login e respectiva senha de acesso.
+    \item O sistema deve permitir que apenas o usuário Gerente faça a inclusão, alteração e exclusão de mesas (cada mesa terá um código e o número máximo de pessoas que comporta).
+    \item O sistema deve emitir uma mensagem de alerta caso o usuário Gerente tente inserir um item do cardápio com um nome que já exista em sua base de dados, e caso a alteração seja confirmada será alterado o prato já existente.
+    \item O sistema deve emitir uma mensagem de erro caso o usuário Gerente tente alterar ou excluir itens do cardápio, funcionários e mesas inexistentes.
+    \item O sistema deve permitir que o usuário Garçom insira um conta separada para cada cliente de uma determinada mesa.
+\end{enumerate}
+
+\subsubsection{Requisitos para o Atendimento do Cliente}
+
+\begin{enumerate}
+\setcounter{enumi}{9}
+    \item O sistema deve permitir ao garçom ou gerente consultar que mesas estão disponíveis no momento.
+    \item O sistema deve permitir que o usuário Garçom marque e desmarque uma mesa como ocupada.
+    \item O sistema deve disponibilizar nos dispositivos móveis o cardápio.
+    \item O sistema deve permitir que o usuário Garçom anote o pedido de um Cliente. O pedido pode conter um ou mais itens do cardápio, sendo que um mesmo item pode ser pedido em quantidade maior que um.
+    \item O sistema deve sempre associar um pedido a uma mesa e a um cliente.
+    \item O sistema deve permitir que a conta seja dividida ao final. Havendo mais de um cliente na mesa, o garçom deve perguntar se as contas serão separadas e nesse caso informar ao sistema os nomes de cada cliente,anotando os pedidos separadamente. Caso um só cliente queira pagar, anota-se só seu nome.
+    \item O sistema deve permitir que o usuário Garçom envie o pedido para a Cozinha.
+    \item O sistema deve permitir que a Cozinha sinalize que o pedido está pronto e pode ser levado pelo garçom até a mesa. O sistema deve armazenar tanto o horário em que o pedido ficou pronto quanto o horário em que foi entregue.
+    \item O sistema deve permitir que o usuário Garçom cancele um pedido, desde que ele ainda não tenha sido preparado.
+    \item O sistema deve permitir que o usuário Garçom solicite o fechamento de uma conta. A conta deve discriminar os totais a serem pagos por cada cliente da mesa. O sistema deve contabilizar o valor da conta, somando os gastos por mesa (se houver mais que um cliente na mesa, totalizar por cliente), somar os 10\% da taxa de serviço e enviar a conta ao caixa para ser impressa. O garçom deve ser avisado para retirar o recibo e apresenta-lo ao cliente.
+    \item O sistema deve permitir que o usuário Garçom selecione a forma de pagamento (dinheiro, cheque ou cartão de crédito) para cada cliente da mesa.
+    \item O sistema deve emitir um relatório sobre os itens do cardápio mais pedidos em determinado período.
+    \item O sistema deve emitir um relatório com os percentuais de pedidos de cada tipo de refeição: de entrada, de comida, de guarnição, de bebida e de sobremesa.
+    \item O sistema deve permitir consultar os pedidos de um determinado dia, com horário do pedido, horário do término do preparo e horário de entrega na mesa, para resolver possíveis reclamações de clientes e estudar estratégias de melhoria de pessoal.
+\end{enumerate}
+
+\subsection{Requisitos de Desempenho}
+
+\begin{enumerate}
+\setcounter{enumi}{23}
+    \item O sistema deve enviar o pedido a cozinha imediatamente após seu fechamento. O tempo limite para envio deve ser de 15s. Após esse tempo o sistema informa ao usuário Garçom que não foi possível estabelecer a conexão com o sistema da cozinha.
+    \item O sistema deve ter uma atualização automática das mesas ocupadas em todos os dispositivos móveis.
+    \item O sistema deve permitir um número máximo de 30 usuários Garçons.
+    \item O sistema deve enviar o fechamento da conta para o Caixa imediatamente. O cliente do restaurante não deve esperar mais do que 5 minutos para o envio do fechamento.
+\end{enumerate}
+
+\subsection{Atributos do Sistema de Software}
+
+\subsubsection{Confiabilidade}
+
+\begin{enumerate}
+\setcounter{enumi}{27}
+    \item O sistema deve garantir o envio do pedido para a cozinha mesmo que exista alguma falha.
+    \item O sistema deve garantir o envio do fechamento da conta ao caixa mesmo que exista alguma falha.
+    \item O sistema deve disparar o backup dos dados diariamente.
+\end{enumerate}
+
+\subsubsection{Disponibilidade}
+
+\begin{enumerate}
+\setcounter{enumi}{30}
+    \item O sistema deve estar disponível em todo o período de funcionamento do estabelecimento, as manutenções devem ser realizadas quando o mesmo estiver fechado.
+    \item O sistema deve ter capacidade para recuperar os dados perdidos na última operação realizada em caso de falha.
+\end{enumerate}
+
+\subsubsection{Segurança}
+
+\begin{enumerate}
+\setcounter{enumi}{32}
+    \item O sistema deve permitir um registro de log dos eventos ocorridos, identificando quem executou cada evento,por exemplo: falhas na comunicação, envio de pedidos, etc.
+    \item O sistema deve operar apenas na rede interna onde ele está sendo executado, impedindo o acesso aos dados via internet, ou qualquer outro meio.
+\end{enumerate}
+
+\subsubsection{Manutenibilidade}
+
+\begin{enumerate}
+\setcounter{enumi}{34}
+    \item O sistema deve ser implantado em módulos, permitindo a adição, exclusão ou alteração de partes do sistemas em afetar o seu funcionamento total.
+\end{enumerate}
+
+\subsubsection{Portabilidade}
+
+\begin{enumerate}
+\setcounter{enumi}{35}
+    \item O sistema deve ser compatível com dispositivos móveis, podendo ser executado em qualquer plataforma.
+    \item O sistema deve ser capaz de armazenar os dados em base de dados Oracle/SQL.
+\end{enumerate}
+
+\end{document}
