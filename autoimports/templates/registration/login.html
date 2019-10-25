@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<style>
+  body {
+    background-image: url("{% static '/imgs/login_bck.jpg' %}");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #cccccc;
+  }
+</style>
+
+{% if next %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+  please login with an account that has access.</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+
+<div class="card-transparent mt-5" style="width: 18rem;">
+  <div class="card-body" style="background-color: rgba(245, 245, 245, 0.9); ">
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        {{ form.username.label_tag }}
+        {{ form.username }}
+      </div>
+      <div class="form-group">
+        {{ form.password.label_tag }}
+        {{ form.password }}
+        <a href="{% url 'password_reset' %}">
+          <small id="senhaHelp" class="form-text text-muted">
+            Perdeu a senha?
+          </small>
+        </a>
+      </div>
+      <input type="submit" value="Entrar" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+  </div>
+</div>
+
+{% if form.errors %}
+<div class="alert alert-danger mt-2" role="alert" style="width: 18rem;">
+  Login e senha não encontrados.
+</div>
+{% endif %}
+
+{% endblock %}
