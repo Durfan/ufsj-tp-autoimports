@@ -1,0 +1,7 @@
+body {
+    background-image: url("/static/imgs/bck02.png");
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-attachment: fixed;
+    background-position: right bottom; 
+  }

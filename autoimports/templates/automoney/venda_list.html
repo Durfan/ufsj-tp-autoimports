@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <h4><i class="fas fa-coins"></i> Extratos</h4>
+  <div class="row">
+    <div class="col-auto mb-3">
+      <div class="card text-center" style="width: 15rem;">
+        <div class="card-body">
+          <form action="." method="get">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-minus"></i></span>
+              </div>
+              <input type="date" name="since" max="31-12-2050" min="01-01-2000" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-plus"></i></span>
+              </div>
+              <input type="date" name="until" min="01-01-2000" max="31-12-2050" class="form-control">
+            </div>
+            <input class="btn btn-secondary" type="submit" value="Gerar extrato" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h5>{{ since }} até {{ until }}</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Peça</th>
+            <th scope="col">Quant.</th>
+            <th scope="col">Valor unid.</th>
+            <th scope="col">Valor Venda</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for peca in object_list %}
+          <tr>
+            <th scope="row">{{ peca.data|date:"j F, Y" }}</th>
+            <td>{{ peca.equip.nome }}</td>
+            <td class="text-center">{{ peca.quantidade }}</td>
+            <td>R$ {{ peca.valorunico|intcomma }}</td>
+            <td>R$ {{ peca.valortotal|intcomma }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p>Valor total do período: <strong>R$ {{ total|floatformat:2|intcomma }}</strong></p>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block jsupdate %}
+
+{% endblock %}

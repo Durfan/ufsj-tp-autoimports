@@ -10,12 +10,12 @@ admin.site.register(Equipamento, EquipamentoAdmin)
 
 class CompraAdmin(admin.ModelAdmin):
 	model = Compra
-	list_display = ['data', 'quantidade', 'get_name', 'get_vcompra']
+	list_display = ['data', 'quantidade', 'get_name', 'valorunico', 'valortotal']
 
 admin.site.register(Compra, CompraAdmin)
 
 class VendaAdmin(admin.ModelAdmin):
 	model = Venda
-	list_display = ['data', 'quantidade', 'get_name', 'get_vvenda']
+	list_display = ['data', 'quantidade', 'get_name', 'valorunico', 'valortotal']
 
 admin.site.register(Venda, VendaAdmin)

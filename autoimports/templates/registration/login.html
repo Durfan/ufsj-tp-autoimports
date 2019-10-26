@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
 {% block content %}
 
 <style>
@@ -12,42 +11,55 @@
   }
 </style>
 
-{% if next %}
-{% if user.is_authenticated %}
-<p>Your account doesn't have access to this page. To proceed,
-  please login with an account that has access.</p>
+{% if next %} {% if user.is_authenticated %}
+<p>
+  Your account doesn't have access to this page. To proceed, please login with
+  an account that has access.
+</p>
 {% else %}
 <p>Please login to see this page.</p>
-{% endif %}
-{% endif %}
+{% endif %} {% endif %}
 
-<div class="card-transparent mt-5" style="width: 18rem;">
-  <div class="card-body" style="background-color: rgba(245, 245, 245, 0.9); ">
-    <form method="post" action="{% url 'login' %}">
-      {% csrf_token %}
-      <div class="form-group">
-        {{ form.username.label_tag }}
-        {{ form.username }}
-      </div>
-      <div class="form-group">
-        {{ form.password.label_tag }}
-        {{ form.password }}
-        <a href="{% url 'password_reset' %}">
-          <small id="senhaHelp" class="form-text text-muted">
-            Perdeu a senha?
-          </small>
-        </a>
-      </div>
-      <input type="submit" value="Entrar" />
-      <input type="hidden" name="next" value="{{ next }}" />
-    </form>
+<div class="container">
+  <div class="card mt-5" style="width: 16rem;">
+    <div class="card-body">
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="usericon"><i class="fa fa-user"></i></span>
+          </div>
+          {{ form.username }}
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="passicon"><i class="fas fa-key"></i></span>
+          </div>
+          {{ form.password }}
+
+        </div>
+        <input type="submit" value="Entrar" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+    </div>
+    <div class="card-footer text-muted">
+      <a href="{% url 'password_reset' %}">
+        Perdeu a senha?
+      </a>
+    </div>
   </div>
-</div>
 
-{% if form.errors %}
-<div class="alert alert-danger mt-2" role="alert" style="width: 18rem;">
-  Login e senha não encontrados.
+  {% if form.errors %}
+  <div class="alert alert-danger mt-2" role="alert" style="width: 16rem;">
+    Login e senha não encontrados.
+  </div>
+  {% endif %}
 </div>
-{% endif %}
+{% endblock %}
 
+{% block jsupdate %}
+<script>
+  $('input[type=text]').addClass('form-control');
+  $('input[type=password]').addClass('form-control');
+</script>
 {% endblock %}
