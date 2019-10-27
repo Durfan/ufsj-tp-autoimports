@@ -1,22 +1,16 @@
+import datetime
+
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from django.core.exceptions import ImproperlyConfigured
-from django.views.generic.dates import MonthArchiveView
 from django.db.models import Sum
 from django.http import Http404
 
-import datetime
-
-from automoney.models import Venda
+from automoney.models import Venda, Compra
 
 
 class HomePageView(TemplateView):
 	template_name = "automoney/index.html"
-
-class VendasMonthView(MonthArchiveView):
-	queryset = Venda.objects.all()
-	date_field = "data"
-	allow_future = True
 
 class VendaListView(ListView):
 	model = Venda

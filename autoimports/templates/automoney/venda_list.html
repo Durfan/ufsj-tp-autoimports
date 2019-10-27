@@ -4,23 +4,24 @@
 {% block content %}
 
 <div class="container mt-5">
-  <h4><i class="fas fa-coins"></i> Extratos</h4>
+  <h4><i class="fas fa-coins"></i> Extratos de Vendas</h4>
   <div class="row">
     <div class="col-auto mb-3">
       <div class="card text-center" style="width: 15rem;">
         <div class="card-body">
-          <form action="." method="get">
+          <form action="." method="GET">
+            {% csrf_token %}
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-minus"></i></span>
               </div>
-              <input type="date" name="since" max="31-12-2050" min="01-01-2000" class="form-control">
+              <input required type="date" name="since" max="31-12-2050" min="01-01-2000" class="form-control">
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-plus"></i></span>
               </div>
-              <input type="date" name="until" min="01-01-2000" max="31-12-2050" class="form-control">
+              <input required type="date" name="until" min="01-01-2000" max="31-12-2050" class="form-control">
             </div>
             <input class="btn btn-secondary" type="submit" value="Gerar extrato" />
           </form>
@@ -29,6 +30,7 @@
     </div>
     <div class="col">
       <h5>{{ since }} até {{ until }}</h5>
+      {% if object_list %}
       <table class="table table-striped">
         <thead>
           <tr>
@@ -52,6 +54,11 @@
         </tbody>
       </table>
       <p>Valor total do período: <strong>R$ {{ total|floatformat:2|intcomma }}</strong></p>
+      {% else %}
+      <div class="alert alert-warning" role="alert" style="max-width: 480px;">
+        Nenhuma venda encontrada.<br>Tente expandir seu período de busca.
+      </div>
+      {% endif %}
 
     </div>
   </div>

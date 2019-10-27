@@ -1,15 +1,6 @@
 {% extends "base.html" %}
-{% load staticfiles %}
-{% block content %}
 
-<style>
-  body {
-    background-image: url("{% static '/imgs/login_bck.jpg' %}");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: #cccccc;
-  }
-</style>
+{% block content %}
 
 {% if next %} {% if user.is_authenticated %}
 <p>

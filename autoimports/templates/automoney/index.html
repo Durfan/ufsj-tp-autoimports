@@ -1,5 +1,57 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
+<div class="container mt-5">
+  <h4 class="mb-4"><i class="fas fa-hand-holding-usd"></i> Módulo Contabilidade <small
+      class="text-muted">AutoMoney&trade;</small></h4>
+  <div class="row">
+    <div class="col-auto mb-3">
+      <div class="card text-center" style="width: 15rem;">
+        <div class="card-body">
+          <form id="extrato" method="get" action="">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-minus"></i></span>
+              </div>
+              <input required type="date" name="since" max="31-12-2050" min="01-01-2000" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-plus"></i></span>
+              </div>
+              <input required type="date" name="until" min="01-01-2000" max="31-12-2050" class="form-control">
+            </div>
+            {% csrf_token %}
+            <div class="input-group">
+              <select class="custom-select" id="tipo" onChange="this.form.action();">
+                <option selected>Extrato...</option>
+                <option value="venda">Vendas</option>
+                <option value="compra">Compras</option>
+              </select>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Gerar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <p>Módulo capaz de gerir as informações de compra e venda de equipamentos e peças automotivas.</p>
+      <p>Gera um extrato contendo todas as informações de compra e venda ocorridas em um determinado período.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block jsupdate %}
+<script>
+  $("#tipo").change(function () {
+    var action = $(this).val();
+    $("#extrato").attr("action", action + "/");
+  });
+</script>
 {% endblock %}
