@@ -25,7 +25,7 @@ SECRET_KEY = 'o_=e-$#3uc_ma_&78lbauzwv#w9!5f84=5xk77mk)2wlml&6!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -78,15 +78,9 @@ WSGI_APPLICATION = 'autoimports.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': os.path.join(BASE_DIR, 'dbdjango.sqlite3'),
-	},
-	'dbautoapps': {
-		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': os.path.join(BASE_DIR, 'dbautoapps.sqlite3'),
+		'NAME': os.path.join(BASE_DIR, 'dbautoimports.sqlite3'),
 	}
 }
-
-DATABASE_ROUTERS = ['automoney.routers.DBRouter']
 
 
 # Password validation
@@ -131,3 +125,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/automoney/'
+
+USE_THOUSAND_SEPARATOR = True
+THOUSAND_SEPARATOR = '.'
+DECIMAL_SEPARATOR = ','

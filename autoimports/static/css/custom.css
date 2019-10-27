@@ -1,7 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-    background-image: url("/static/imgs/bck02.png");
-    background-repeat: no-repeat;
-    background-size: 45%;
-    background-attachment: fixed;
-    background-position: right bottom; 
-  }
+  background-image: url("/static/imgs/bck02.png");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-attachment: fixed;
+  background-position: right bottom;
+  margin-bottom: 40px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+}

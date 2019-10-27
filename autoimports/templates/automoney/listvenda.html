@@ -1,16 +1,19 @@
 {% extends "base.html" %}
-{% load humanize %}
+
+{% block title %}
+AutoImports: Extrato de Vendas
+{% endblock %}
 
 {% block content %}
 
 <div class="container mt-5">
-  <h4><i class="fas fa-coins"></i> Extratos de Vendas</h4>
+  <h4 class="mb-4"><i class="fas fa-hand-holding-usd"></i> Módulo Contabilidade <small
+      class="text-muted">AutoMoney&trade;</small></h4>
   <div class="row">
     <div class="col-auto mb-3">
       <div class="card text-center" style="width: 15rem;">
         <div class="card-body">
-          <form action="." method="GET">
-            {% csrf_token %}
+          <form id="extrato" method="get" action="">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-minus"></i></span>
@@ -23,13 +26,23 @@
               </div>
               <input required type="date" name="until" min="01-01-2000" max="31-12-2050" class="form-control">
             </div>
-            <input class="btn btn-secondary" type="submit" value="Gerar extrato" />
+            {% csrf_token %}
+            <div class="input-group">
+              <select class="custom-select" id="tipo" onChange="this.form.action();">
+                <option selected value="venda">Vendas</option>
+                <option value="compra">Compras</option>
+                <option value="balanco">Balanço</option>
+              </select>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Gerar</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </div>
     <div class="col">
-      <h5>{{ since }} até {{ until }}</h5>
+      <h5>Extrato de Vendas: {{ since|date:"j F, Y" }} / {{ until|date:"j F, Y" }}</h5>
       {% if object_list %}
       <table class="table table-striped">
         <thead>
@@ -47,13 +60,13 @@
             <th scope="row">{{ peca.data|date:"j F, Y" }}</th>
             <td>{{ peca.equip.nome }}</td>
             <td class="text-center">{{ peca.quantidade }}</td>
-            <td>R$ {{ peca.valorunico|intcomma }}</td>
-            <td>R$ {{ peca.valortotal|intcomma }}</td>
+            <td>R$ {{ peca.valorunico }}</td>
+            <td>R$ {{ peca.valortotal }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      <p>Valor total do período: <strong>R$ {{ total|floatformat:2|intcomma }}</strong></p>
+      <p>Valor total do período: <strong>R$ {{ total }}</strong></p>
       {% else %}
       <div class="alert alert-warning" role="alert" style="max-width: 480px;">
         Nenhuma venda encontrada.<br>Tente expandir seu período de busca.
@@ -65,13 +78,13 @@
 
 </div>
 
-
-
-
-
-
 {% endblock %}
 
 {% block jsupdate %}
-
+<script>
+  $("#tipo").change(function () {
+    var action = $(this).val();
+    $("#extrato").attr("action", "../" + action + "/");
+  });
+</script>
 {% endblock %}
