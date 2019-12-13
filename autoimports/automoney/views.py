@@ -12,6 +12,12 @@ from automoney.models import Venda, Compra
 class HomePageView(TemplateView):
 	template_name = "automoney/index.html"
 
+	def get_context_data(self, *args, **kwargs):
+		context = super(HomePageView,self).get_context_data(*args, **kwargs)
+		context['activetab'] = 'contabilidade'
+		return context
+
+
 class VendaListView(ListView):
 	model = Venda
 	template_name = 'automoney/listvenda.html'
@@ -81,7 +87,8 @@ class VendaListView(ListView):
 	def get_context_data(self, **kwargs):
 		context = {'total': self.get_total(),
 				   'since': self.get_since_date(),
-				   'until': self.get_until_date()}
+				   'until': self.get_until_date(),
+				   'activetab': 'contabilidade'}
 		context.update(kwargs)
 		return super(VendaListView, self).get_context_data(**context)
 
@@ -155,7 +162,8 @@ class CompraListView(ListView):
 	def get_context_data(self, **kwargs):
 		context = {'total': self.get_total(),
 				   'since': self.get_since_date(),
-				   'until': self.get_until_date()}
+				   'until': self.get_until_date(),
+				   'activetab': 'contabilidade'}
 		context.update(kwargs)
 		return super(CompraListView, self).get_context_data(**context)
 
@@ -237,6 +245,7 @@ class BalancoListView(ListView):
 				   'totalvendas': self.get_vendas(),
 				   'balanco': self.get_balanco(),
 				   'since': self.get_since_date(),
-				   'until': self.get_until_date()}
+				   'until': self.get_until_date(),
+				   'activetab': 'contabilidade'}
 		context.update(kwargs)
 		return super(BalancoListView, self).get_context_data(**context)

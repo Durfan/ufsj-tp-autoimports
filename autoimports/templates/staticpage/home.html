@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+AutoImports
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+  <div class="float-left mr-2"><img src="{% static '/imgs/logo_ufsj2.png' %}" alt="UFSJ"></div>
+  
+  <h4>Introdução à Engenharia de Software <small
+    class="text-muted">Trabalho Prático</small></h4>
+
+  <p>Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da Engenharia de Software em um caso criado para estudo.</p>
+  <p>Nessa versão de configuração, é implementado o <strong>módulo de Contabilidade</strong>.</p>
+
+  <h5>Descrição</h4>
+  
+  <p>Você faz parte de uma empresa que foi contratada para desenvolver um sistema de planejamento de recursos empresariais – ou ERP – da empresa <em>AutoImports</em>. A <em>AutoImports</em> é uma empresa que realiza a manutenção de carros importados de luxo, e tem a disposição dos clientes os serviços de manutenção mecânica, pintura e funilaria. A empresa busca, através de uma ferramenta computacional, melhorar seu processo interno e poder ter mais transparência sobre a contabilidade da empresa e também com relação ao estado dos serviços. Por se tratar de um projeto extenso e de certa urgência, cada equipe deverá focar no desenvolvimento de um módulo do sistema, que deverão ser completamente integrados futuramente.</p>
+  <p>Após a entrevista com o cliente, ficaram definidos os seguintes módulos que deverão estar presentes no sistema:</p>
+
+  <ul>
+    <li><strong>RH:</strong> este módulo deve ser capaz de gerenciar o corpo de funcionários. Os usuários deste módulo deverão ser capazes de cadastrar, remover, e alterar informações de seus funcionários e dependentes – incluindo salário, férias, tempo de serviço, entre outros dados. Ao cadastrar, o sistema deverá gerar um número de matrícula adequado para o funcionário. Os usuários também devem ser capazes de gerenciar oportunidades e vagas de emprego no sistema, que será exibido de maneira automática no site da empresa.</li>
+    <li><strong>Logística:</strong> neste módulo, os usuários deverão ser capazes de gerenciar o estoque de peças e utensílios da empresa (como tintas, ferramentas, entre outros) e também realizar pedidos de compra e manutenção dos equipamentos existentes.</li>
+    <li><strong>Contabilidade:</strong> neste módulo os usuários deverão ser capazes de gerir as informações de compra e venda de equipamentos e peças automotivas. Os usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.</li>
+    <li><strong>Execução/Serviços:</strong> neste módulo os usuários deverão ser capazes de gerenciar os serviços. Os usuários deverão ser capazes de listar os serviços em andamento, e consultar em qual etapa ele se encontra. A alteração da etapa de um serviço (andamento) é feita preferencialmente pelos próprios funcionários através do envio para o sistema através de seus smartphones ou de um dispositivo portátil em local estratégico (em que é feito a leitura do cartão do funcionário), no entanto, também poderá ser realizada por um usuário dentro do sistema proposto.</li>
+    <li><strong>Controle de acesso:</strong> este é um módulo acessível apenas aos administradores do sistema, e permite sejam alterados quais os módulos que um usuário tem acesso, visualizar os usuários cadastrados, deletá-los e também permitir a recuperação de senha de acesso a um usuário. Este módulo também deve permitir o gerenciamento de um cartão de matrícula do funcionário (utilizado para realizar o check-in dos funcionários da empresa e também para ser utilizado como confirmação de alteração de etapa no novo dispositivo pedido).</li>
+    <li><strong>CRM:</strong> esse módulo permite que sejam visualizados os históricos de contratos e informações do relacionamento com clientes e fornecedores. Os usuários poderão gerenciar e cadastrar clientes e fornecedores para que sejam feitos a integração no sistema.</li>
+  </ul>
+
+</div>
+
+{% endblock %}
