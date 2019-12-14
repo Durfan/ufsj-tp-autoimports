@@ -4,7 +4,9 @@
 
 Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da Engenharia de Software em um caso criado para estudo.
 
-![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png)
+| Desktop             |  Mobile |
+:-------------------------:|:-------------------------:
+![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png)|![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura2.png)
 
 ## Instalação para o desenvolvimento dos outros módulos
 
