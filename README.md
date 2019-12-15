@@ -8,9 +8,25 @@ Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da E
 :-------------------------:|:-------------------------:
 ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png)|![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura2.png)
 
+## Tecnologias e Padrões de Projeto Utilizados
+
+### Visão de Implementação
+
+O trabalho prático foi desenvolvido utilizando um framework que facilita o desenvolvimento dos módulos para equipes separadas. O uso de um framework para a implementação é justificado pela facilidade e praticidade em manusear um banco de dados definido nos modelos estabelecidos para cada módulo. Esse estilo arquitetural permite que outras equipes possam ter um desenvolvimento mais pratico em relação ao trabalho em outros módulos.
+
+### Padrão do Prodejo
+
+MVC que utiliza o [Django](https://www.djangoproject.com/) como framework para implementar os módulos, esse segue exatamente o conceito de model, view e controller como padrão arquitetural.
+
+#### Componentes
+
+* [Google Charts](https://developers.google.com/chart) Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
+* [Bootstrap](https://getbootstrap.com/) _Front-end component library_, responsavel pelo design do front-end do projeto.
+* [Font Awesome](https://fontawesome.com/) Iconografia de elementos do front-end.
+
 ## Módulos Implementados
 
-Contabilidade: usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
+* **Contabilidade** usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
 
 ## Instalação para o desenvolvimento dos outros módulos
 
