@@ -16,7 +16,9 @@ O trabalho prático foi desenvolvido utilizando um framework que facilita o dese
 
 ### Padrão do Prodejo
 
-MVC que utiliza o [Django](https://www.djangoproject.com/) como framework para implementar os módulos, esse segue exatamente o conceito de model, view e controller como padrão arquitetural.
+MVC que utiliza o [Django](https://www.djangoproject.com/) como framework para implementar os módulos, esse segue exatamente o conceito de model, view e controller como padrão arquitetural. O Django é capaz de criar cada módulo como uma aplicação em separado (webapp), sendo que cada webapp pode compartilhar da mesma estrutura dos modelos dentro de um projeto.
+
+O Django oferece diversas configurações para a api de banco de dados. Para fins de demonstração e facilitar o deploy, o SQLite foi escolhido para integração no projet. A migração para um banco de dados mais escalonavel pode ser feita de maneira simples pelo Django.
 
 #### Componentes
 
