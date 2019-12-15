@@ -8,6 +8,10 @@ Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da E
 :-------------------------:|:-------------------------:
 ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png)|![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura2.png)
 
+## Módulos Implementados
+
+Contabilidade: usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
+
 ## Instalação para o desenvolvimento dos outros módulos
 
 Para o desenvolvimento dos módulos definidos em outros grupos, siga os passos abaixo:
