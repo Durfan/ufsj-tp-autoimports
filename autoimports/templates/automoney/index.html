@@ -13,7 +13,7 @@ AutoImports: AutoMoney
       class="text-muted">AutoMoney&trade;</small></h4>
   <div class="row">
     <div class="col-auto mb-3">
-      <div class="card text-center" style="width: 15rem;">
+      <div class="card text-center" style="width: 16rem;">
         <div class="card-body">
           <form id="extrato" method="get" action="">
             <div class="input-group mb-3">
@@ -31,13 +31,13 @@ AutoImports: AutoMoney
             {% csrf_token %}
             <div class="input-group">
               <select class="custom-select" id="tipo" onChange="this.form.action();">
-                <option selected>Extrato...</option>
+                <option selected value="none">Extrato...</option>
                 <option value="venda">Vendas</option>
                 <option value="compra">Compras</option>
                 <option value="balanco">Balanço</option>
               </select>
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit">Gerar</button>
+                <button id="submitForm" class="btn btn-outline-secondary" type="submit">Gerar</button>
               </div>
             </div>
           </form>
@@ -54,10 +54,35 @@ AutoImports: AutoMoney
 {% include "automoney/restrito.html" %}
 {% endif %}
 
+<!-- Modal -->
+<div class="modal fade" id="alertaerro" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sistema AutoMoney&trade;</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body alert-warning">
+        Selecione o tipo de extrato: <strong>Vendas</strong>, <strong>Compras</strong> ou <strong>Balanço</strong>.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 {% block jsupdate %}
 <script>
+  $('#submitForm').click(function () {
+    let rdd = $('#tipo').val();
+    if (rdd == "none")
+      $('#alertaerro').modal();
+  });
   $("#tipo").change(function () {
     var action = $(this).val();
     $("#extrato").attr("action", action + "/");
