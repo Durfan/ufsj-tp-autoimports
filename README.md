@@ -26,9 +26,18 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 * [Bootstrap](https://getbootstrap.com/) _Front-end component library_, responsavel pelo design do front-end do projeto.
 * [Font Awesome](https://fontawesome.com/) Iconografia de elementos do front-end.
 
+### Deploy
+
+[pythonanywhere](pythonanywhere.com) O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático.
+
 ## Módulos Implementados
 
 * **Contabilidade** usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
+
+### Módulos Parcialmente Implementados
+
+* **Controle de acesso** desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
+* **Logística** implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
 
 ## Instalação para o desenvolvimento dos outros módulos
 
