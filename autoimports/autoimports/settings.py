@@ -23,7 +23,7 @@ SECRET_KEY = 'o_=e-$#3uc_ma_&78lbauzwv#w9!5f84=5xk77mk)2wlml&6!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'durfan.pythonanywhere.com']
 
 
 # Application definition
