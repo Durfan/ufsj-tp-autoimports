@@ -5,8 +5,8 @@ AutoImports: Logout
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+<div class="container mt-5">
+  <h4 class="mb-4"><i class="fas fa-sign-out-alt"></i> Usuário desconectado</h4>
+  <a href="{% url 'login'%}" class="btn btn-outline-primary" role="button">Entrar novamente</a>
 </div>
 {% endblock %}
