@@ -27,9 +27,9 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 
 #### Componentes
 
-* [Google Charts](https://developers.google.com/chart) - Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
-* [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - responsavel pelo design do front-end do projeto.
-* [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do front-end.
+*  [Google Charts](https://developers.google.com/chart) - Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
+*  [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - responsavel pelo design do front-end do projeto.
+*  [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do front-end.
 
 #### Qualidade de Software
 
@@ -41,12 +41,12 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 
 ## Módulos Implementados
 
-* :dollar: **Contabilidade**: usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
+*  :dollar: **Contabilidade**: usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
 
 ### Módulos Parcialmente Implementados
 
-* :key: **Controle de acesso**: desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
-* :arrows_counterclockwise: **Logística**: implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
+*  :key: **Controle de acesso**: desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
+*  :arrows_counterclockwise: **Logística**: implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
 
 ## Instalação para o desenvolvimento dos outros módulos
 
