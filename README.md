@@ -16,11 +16,11 @@ Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da E
 
 O trabalho prático foi desenvolvido utilizando um framework que facilita o desenvolvimento dos módulos para equipes separadas. O uso de um framework para a implementação é justificado pela facilidade e praticidade em manusear um banco de dados definido nos modelos estabelecidos para cada módulo. Esse estilo arquitetural permite que outras equipes possam ter um desenvolvimento mais pratico em relação ao trabalho em outros módulos.
 
-### Gerenciamento de Confguração e Mudança
+### Gerenciamento de Configuração e Mudança
 
 Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG [v0.1-Contab](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab).
 
-### Padrão do Prodejo
+### Padrão do Projeto
 
 MVC que utiliza o [Django](https://www.djangoproject.com/) como framework para implementar os módulos, esse segue exatamente o conceito de model, view e controller como padrão arquitetural. O Django é capaz de criar cada módulo como uma aplicação em separado (webapp), sendo que cada webapp pode compartilhar da mesma estrutura dos modelos dentro de um projeto.
 
