@@ -16,7 +16,7 @@ O trabalho prático foi desenvolvido utilizando um framework que facilita o dese
 
 ### Gerenciamento de Confguração e Mudança
 
-Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG "Contab v0.1".
+Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG "v0.1-Contab".
 
 ### Padrão do Prodejo
 
@@ -26,13 +26,13 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 
 #### Componentes
 
-* [Google Charts](https://developers.google.com/chart) Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
-* [Bootstrap](https://getbootstrap.com/) _Front-end component library_, responsavel pelo design do front-end do projeto.
-* [Font Awesome](https://fontawesome.com/) Iconografia de elementos do front-end.
+* [Google Charts](https://developers.google.com/chart) - Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
+* [Bootstrap](https://getbootstrap.com/) _Front-end component library_, - responsavel pelo design do front-end do projeto.
+* [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do front-end.
 
 ### Deploy
 
-[pythonanywhere](pythonanywhere.com) O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático.
+[pythonanywhere](pythonanywhere.com) - O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático.
 
 ## Módulos Implementados
 
