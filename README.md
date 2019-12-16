@@ -8,6 +8,45 @@ Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da E
 :-------------------------:|:-------------------------:
 ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png)|![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura2.png)
 
+## Tecnologias e Padrões de Projeto Utilizados
+
+### Visão de Implementação
+
+O trabalho prático foi desenvolvido utilizando um framework que facilita o desenvolvimento dos módulos para equipes separadas. O uso de um framework para a implementação é justificado pela facilidade e praticidade em manusear um banco de dados definido nos modelos estabelecidos para cada módulo. Esse estilo arquitetural permite que outras equipes possam ter um desenvolvimento mais pratico em relação ao trabalho em outros módulos.
+
+### Gerenciamento de Confguração e Mudança
+
+Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG [v0.1-Contab](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab).
+
+### Padrão do Prodejo
+
+MVC que utiliza o [Django](https://www.djangoproject.com/) como framework para implementar os módulos, esse segue exatamente o conceito de model, view e controller como padrão arquitetural. O Django é capaz de criar cada módulo como uma aplicação em separado (webapp), sendo que cada webapp pode compartilhar da mesma estrutura dos modelos dentro de um projeto.
+
+O Django oferece diversas configurações para a api de banco de dados. Para fins de demonstração e facilitar o deploy, o SQLite foi escolhido para integração no projeto. A migração para um banco de dados mais escalonavel pode ser feita de maneira simples pelo Django.
+
+#### Componentes
+
+* [Google Charts](https://developers.google.com/chart) - Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
+* [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - responsavel pelo design do front-end do projeto.
+* [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do front-end.
+
+#### Qualidade de Software
+
+[sentry](https://sentry.io/) - Utilizado para monitoramento e verificação de qualidade em cada artefato de software. Por motivos de simplificção de desenvolvimento para outras equipes, a api foi removida.
+
+### Deploy
+
+[pythonanywhere](pythonanywhere.com) - O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático. O projeto implementado nesse repositório pode ser visto em [http://durfan.pythonanywhere.com/](http://durfan.pythonanywhere.com/).
+
+## Módulos Implementados
+
+* :dollar: **Contabilidade**: usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
+
+### Módulos Parcialmente Implementados
+
+* :key: **Controle de acesso**: desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
+* :arrows_counterclockwise: **Logística**: implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
+
 ## Instalação para o desenvolvimento dos outros módulos
 
 Para o desenvolvimento dos módulos definidos em outros grupos, siga os passos abaixo:
