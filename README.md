@@ -32,7 +32,7 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 
 #### Qualidade de Software
 
-[sentry](https://sentry.io/) - Utilizado para monitoramento e verificação de qualidade em cada artefato de software.
+[sentry](https://sentry.io/) - Utilizado para monitoramento e verificação de qualidade em cada artefato de software. Por motivos de simplificção de desenvolvimento para outras equipes, a api foi removida.
 
 ### Deploy
 
