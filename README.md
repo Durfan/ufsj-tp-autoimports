@@ -36,7 +36,7 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 
 ### Deploy
 
-[pythonanywhere](pythonanywhere.com) - O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático.
+[pythonanywhere](pythonanywhere.com) - O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático. O projeto implementado nesse repositório pode ser visto em [http://durfan.pythonanywhere.com/](http://durfan.pythonanywhere.com/).
 
 ## Módulos Implementados
 
