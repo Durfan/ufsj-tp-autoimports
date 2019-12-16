@@ -30,6 +30,10 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 * [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - responsavel pelo design do front-end do projeto.
 * [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do front-end.
 
+#### Qualidade de Software
+
+[sentry](https://sentry.io/) - Utilizado para monitoramento e verificação de qualidade em cada artefato de software.
+
 ### Deploy
 
 [pythonanywhere](pythonanywhere.com) - O deploy foi realizado utilizando uma máquina virtual para executar o framework. Não é voltado para fins de produção, apenas para demonstração do trabalho prático.
