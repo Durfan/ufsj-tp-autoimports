@@ -40,12 +40,12 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 
 ## Módulos Implementados
 
-* **Contabilidade** usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
+* :dollar: **Contabilidade**: usuários poderão gerar um extrato contendo todas as informações de compra e venda ocorridas desde o início do mês.
 
 ### Módulos Parcialmente Implementados
 
-* **Controle de acesso** desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
-* **Logística** implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
+* :key: **Controle de acesso**: desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
+* :arrows_counterclockwise: **Logística**: implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
 
 ## Instalação para o desenvolvimento dos outros módulos
 
