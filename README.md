@@ -16,7 +16,7 @@ O trabalho prático foi desenvolvido utilizando um framework que facilita o dese
 
 ### Gerenciamento de Confguração e Mudança
 
-Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG "v0.1-Contab".
+Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG [v0.1-Contab](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab).
 
 ### Padrão do Prodejo
 
