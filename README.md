@@ -1,5 +1,5 @@
 # Introdução à Engenharia de Software 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c67b46dff2ad4a8ca60e5c05ee199735)](https://www.codacy.com/manual/Durfan/ufsj-tp-autoimports?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Durfan/ufsj-tp-autoimports&amp;utm_campaign=Badge_Grade) [![tag](https://img.shields.io/github/v/tag/durfan/ufsj-tp-autoimports)](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab) [![python](https://img.shields.io/pypi/pyversions/Django)]()
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c67b46dff2ad4a8ca60e5c05ee199735)](https://www.codacy.com/manual/Durfan/ufsj-tp-autoimports?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Durfan/ufsj-tp-autoimports&amp;utm_campaign=Badge_Grade) [![tag](https://img.shields.io/github/v/tag/durfan/ufsj-tp-autoimports)](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab) [![python](https://img.shields.io/pypi/pyversions/Django)](#)
 
 ## Trabalho Prático
 
