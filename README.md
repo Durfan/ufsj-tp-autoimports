@@ -7,7 +7,7 @@ Este trabalho prático tem como objetivo aplicar os conceitos e ferramentas da E
 
 | Desktop                                                                                | Mobile                                                                                |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png) | ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura2.png) |
+| ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura.png)                                                                                | ![Captura](https://github.com/Durfan/ufsj-tp-autoimports/blob/master/docs/captura2.png)                                                                                |
 
 ## Tecnologias e Padrões de Projeto Utilizados
 
