@@ -18,23 +18,23 @@ O trabalho prático foi desenvolvido utilizando um framework que facilita o dese
 
 ### Gerenciamento de Configuração e Mudança
 
-Este repositório foi utilizado para o controle de versão, mudança e auditoria de confguração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG [v0.1-Contab](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab).
+Este repositório foi utilizado para o controle de versão, mudança e auditoria de configuração do projeto do trabalho prático. Sendo a entrega do módulo de Contabilidade o baseline estabelecido na TAG [v0.1-Contab](https://github.com/Durfan/ufsj-tp-autoimports/tree/v0.1-Contab).
 
 ### Padrão do Projeto
 
 MVC que utiliza o [Django](https://www.djangoproject.com/) como framework para implementar os módulos, esse segue exatamente o conceito de model, view e controller como padrão arquitetural. O Django é capaz de criar cada módulo como uma aplicação em separado (webapp), sendo que cada webapp pode compartilhar da mesma estrutura dos modelos dentro de um projeto.
 
-O Django oferece diversas configurações para a api de banco de dados. Para fins de demonstração e facilitar o deploy, o SQLite foi escolhido para integração no projeto. A migração para um banco de dados mais escalonavel pode ser feita de maneira simples pelo Django.
+O Django oferece diversas configurações para a API de banco de dados. Para fins de demonstração e facilitar o deploy, o SQLite foi escolhido para integração no projeto. A migração para um banco de dados mais escalonável pode ser feita de maneira simples pelo Django.
 
 #### Componentes
 
 * [Google Charts](https://developers.google.com/chart) - Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
-* [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - responsavel pelo design do front-end do projeto.
-* [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do front-end.
+* [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - Responsável pelo design do frontend do projeto.
+* [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do frontend.
 
 #### Qualidade de Software
 
-[sentry](https://sentry.io/) - Utilizado para monitoramento e verificação de qualidade em cada artefato de software. Por motivos de simplificção de desenvolvimento para outras equipes, a api foi removida.
+[sentry](https://sentry.io/) - Utilizado para monitoramento e verificação de qualidade em cada artefato de software. Por motivos de simplificação de desenvolvimento para outras equipes, a API foi removida.
 
 ### Deploy
 
@@ -47,7 +47,7 @@ O Django oferece diversas configurações para a api de banco de dados. Para fin
 ### Módulos Parcialmente Implementados
 
 * :key: **Controle de acesso**: desenvolvido para permitir o controle de acesso dos usuário aos módulos implementados. Permite controle total de grupos de usuários. (Componente do framework utilizado)
-* :arrows_counterclockwise: **Logística**: implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado atraves da administração do projeto.
+* :arrows_counterclockwise: **Logística**: implementado a partir da geração de modelos para as tabelas do Banco de Dados com o objetivo de manusear os dados para o módulo de Contabilidade. Pode ser acessado através da administração do projeto.
 
 ## Instalação para o desenvolvimento dos outros módulos
 
