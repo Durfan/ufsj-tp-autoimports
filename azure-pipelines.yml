@@ -11,7 +11,7 @@ variables:
   azureServiceConnectionId: '7712e204-0ce7-407a-a536-3a3d4562931d'
   
   # Web app name
-  webAppName: 'autoimports'
+  webAppName: ''
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
