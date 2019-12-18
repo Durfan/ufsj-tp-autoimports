@@ -29,7 +29,7 @@ O Django oferece diversas configurações para a API de banco de dados. Para fin
 #### Componentes
 
 * [Google Charts](https://developers.google.com/chart) - Implementa a visualização dos gráficos de balanço no módulo Contabilidade.
-* [Bootstrap](https://getbootstrap.com/) (_Front-end component library_) - Responsável pelo design do frontend do projeto.
+* [Bootstrap](https://getbootstrap.com/) (_Frontend component library_) - Responsável pelo design do frontend do projeto.
 * [Font Awesome](https://fontawesome.com/) - Iconografia de elementos do frontend.
 
 #### Qualidade de Software
